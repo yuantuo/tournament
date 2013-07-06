@@ -12,8 +12,8 @@
 		<br />
 		<div class="stages">
 			<div id="stage1" class="stage">
-				<div class="game 1v1">
-					<h1><%= "Tournament name : #{@tournament.name}"%></h1>
+				<div class="1v1">
+					<p><%= "Tournament name : #{@tournament.name}"%></p>
 					<p><%= "Tournament  : #{@tournament.email}"%></p>
 					<p><%= "Tournament description : #{@tournament.desc}"%></p>
 				</div>
@@ -23,23 +23,23 @@
 	
 	<!-- tournament Score updates -->
 	<section>
-		<br />
-		<br />
-		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post ) do %>
-		    <%= label_tag 'p1', 'player 1' %>
+		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post, :class => "game") do %>
+		    <%= label_tag 'p1', 'player 1', :class => "input-field input-name" %>
 			<%= text_field_tag 'p1' %>
 			
-			<%= label_tag 's1', 'score 1' %>
-			<%= text_field_tag 's1' %>
+			<%= label_tag 's1', 'score 1', :class => "input-field input-score" %>
+			<%= text_field_tag 's1', :type => "number", :class => "input-score" %>
+
+			<br />
 			
-		    <%= label_tag 'p2', 'player 2' %>
+		    <%= label_tag 'p2', 'player 2', :class => "input-field input-name" %>
 			<%= text_field_tag 'p2' %>
 
 		    <%= label_tag 's2', 'score 2' %>
-			<%= text_field_tag 's2' %>
+			<%= text_field_tag 's2', :type => "number", :class => "input-field input-score" %>
 			
 			<div class="actions">
-		    <%= submit_tag "Submit" %>
+		    <%= submit_tag "Submit", :class => "add-button" %>
 		  </div>
 		<% end %>
 		
