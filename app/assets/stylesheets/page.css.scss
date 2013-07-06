@@ -14,10 +14,10 @@ h1 {
 	margin-bottom: 15px;
 }
 
-a:link {color:#fff;}      /* unvisited link */
-a:visited {color: rgb(240, 240, 240);}  /* visited link */
-a:hover {color: rgb(220, 220, 220);}  /* mouse over link */
-a:active {color: rgb(200, 200, 200);}  /* selected link */
+a:link {color:#fff; text-decoration: none;}      /* unvisited link */
+a:visited {color: rgb(240, 240, 240); text-decoration: none;}  /* visited link */
+a:hover {color: rgb(220, 220, 220); text-decoration: underline;}  /* mouse over link */
+a:active {color: rgb(200, 200, 200); text-decoration: underline;}  /* selected link */
 
 .intro-text {
 	font-size: 1.3em;
@@ -88,7 +88,7 @@ input[id="tournament_name"] {
 }
 */ 
 .add-button {
-	background-color: rgb();
+	background-color: rgb(red);
 	display: inline-block;
 	padding: 5px 10px;
 	border: 1px solid rgb(70%, 70%, 70%);
