@@ -35,7 +35,7 @@
 		<% @live_tournaments.each do |lt| %>
 		
 			<% colornum = rand(23) + 1%>
-			<div class="tpanel" data-color="<%= colornum %>"><%= link_to 'link', scoreboard_path(lt.tkey) %></div>
+			<div class="tpanel" data-color="<%= colornum %>"><%= link_to lt.name, scoreboard_path(lt.tkey) %></div>
 		
 		<% end %>
 		
