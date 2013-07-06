@@ -16,13 +16,13 @@ class PageController < ApplicationController
         Rails.logger.debug(@score_hash.inspect )
 
     end
-    
-    
-    
+
   end
 
   def home
         @tournament = Tournament.new
+        @live_tournaments = Tournament.all
+        
   end
 
   def scoreupdate

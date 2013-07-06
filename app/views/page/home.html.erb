@@ -1,5 +1,4 @@
 <div class='landing-page container'>
-	
 	<h1>Welcome to scoreboard</h1>
 	
 	<%= form_for(@tournament) do |f| %>
@@ -30,6 +29,17 @@
 	    <%= f.submit 'Submit', :class => "add-button" %>
 	  </div>
 	<% end %>
+	
+	<div id="tmain">
+		
+		<% @live_tournaments.each do |lt| %>
+		
+			<% colornum = rand(23) + 1%>
+			<div class="tpanel" data-color="<%= colornum %>"><%= link_to 'link', scoreboard_path(lt.tkey) %></div>
+		
+		<% end %>
+		
+	</div>
 
 	
 </div>
