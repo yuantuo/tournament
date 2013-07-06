@@ -1,6 +1,6 @@
 <div class='landing-page container'>
 	
-	<h1>Welcome to scoreboard</h1>
+	<h1>Scoreboard</h1>
 	
 	<%= form_for(@tournament) do |f| %>
 	  <% if @tournament.errors.any? %>
@@ -33,3 +33,13 @@
 
 	
 </div>
+
+<script type="text/javascript">
+	$(document).ready {
+		$(".tpanel").each(function() {
+			var color = $(this).data('color') * 10;
+			$(this).css('background-color','hsl(' + color + ' , 100%, 50%)');
+		});
+}
+
+</script>
