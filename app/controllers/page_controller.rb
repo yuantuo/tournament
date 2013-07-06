@@ -31,7 +31,11 @@ class PageController < ApplicationController
     @game.scores.build({:name => params[:p1], :score =>params[:s1], :tkey => params[:id]})
     @game.scores.build({:name => params[:p2], :score =>params[:s2], :tkey => params[:id]})    
     @game.save
-    
     redirect_to scoreboard_path(params[:id])
+  end
+  
+  def games_list
+    Rails.logger.debug( params.inspect + 'klfjldsj;lfkjadlfjldj')
+    @games = Game.find_by_tkey(params[:id])
   end
 end
