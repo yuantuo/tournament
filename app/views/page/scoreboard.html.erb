@@ -26,7 +26,7 @@
 		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post, :class => "panel game") do %>
 		    <%= label_tag 'p1', 'Player 1' %>
 			<%= text_field_tag 'p1', nil, :class => "input-field input-name" %>
-			
+
 			<%= label_tag 's1', 'Score 1' %>
 			<%= number_field_tag 's1', nil, :class => "input-field input-score" %>
 
