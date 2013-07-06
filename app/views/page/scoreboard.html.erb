@@ -28,7 +28,7 @@
 			<%= text_field_tag 'p1' %>
 			
 			<%= label_tag 's1', 'score 1', :class => "input-field input-score" %>
-			<%= text_field_tag 's1', :type => "number", :class => "input-score" %>
+			<%= number_field_tag 's1', nil, :class => "input-score" %>
 
 			<br />
 			
@@ -36,7 +36,7 @@
 			<%= text_field_tag 'p2' %>
 
 		    <%= label_tag 's2', 'score 2' %>
-			<%= text_field_tag 's2', :type => "number", :class => "input-field input-score" %>
+			<%= number_field_tag 's2', nil, :class => "input-field input-score" %>
 			
 			<div class="actions">
 		    <%= submit_tag "Submit", :class => "add-button" %>
