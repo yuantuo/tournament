@@ -2,8 +2,8 @@
 	
 	<!-- tournament -->	
 	<section>
-		<h1 id="tournamentName" contenteditable="">Scoreboard</h1>
-		<p>Track tournament scores. </p>
+		<h1 id="tournamentName" contenteditable>Scoreboard</h1>
+		<p class="intro-text">Track tournament scores. </p>
 	<section>
 	
 	<!-- tournament details -->	
@@ -23,17 +23,19 @@
 	
 	<!-- tournament Score updates -->
 	<section>
-		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post, :class => "game") do %>
-		    <%= label_tag 'p1', 'player 1' %>
+		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post, :class => "panel game") do %>
+		    <%= label_tag 'p1', 'Player 1' %>
 			<%= text_field_tag 'p1', nil, :class => "input-field input-name" %>
-			
-			<%= label_tag 's1', 'score 1' %>
-			<%= number_field_tag 's1', nil, :class => "input-score" %>
+
+			<%= label_tag 's1', 'Score 1' %>
+			<%= number_field_tag 's1', nil, :class => "input-field input-score" %>
+
 			<br />
-		    <%= label_tag 'p2', 'player 2'%>
+			
+		    <%= label_tag 'p2', 'Player 2'%>
 			<%= text_field_tag 'p2', nil, :class => "input-field input-name" %>
 
-		    <%= label_tag 's2', 'score 2' %>
+		    <%= label_tag 's2', 'Score 2' %>
 			<%= number_field_tag 's2', nil, :class => "input-field input-score" %>
 			
 			<div class="actions">
@@ -53,7 +55,7 @@
 	<!-- tournament Score results -->
 	<section>
 		
-		<table class="scoretable">
+		<table class="panel scoretable">
 			<br />
 			<br />
 			<thead>
