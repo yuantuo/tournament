@@ -2,13 +2,12 @@ Scoreboard::Application.routes.draw do
 
 
   resources :scores
-
-
   resources :games
 
 
   match '/scoreboard/:id', :to => "page#scoreboard", :as => :scoreboard
   match '/scoreupdate/:id', :to => "page#scoreupdate", :as => :scoreupdate
+  match '/games/list/:id', :to => "page#games_list", :as => :games_list
   
   resources :tournaments
   # The priority is based upon order of creation:
