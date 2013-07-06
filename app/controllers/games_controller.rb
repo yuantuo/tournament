@@ -73,11 +73,12 @@ class GamesController < ApplicationController
   # DELETE /games/1.json
   def destroy
     @game = Game.find(params[:id])
-    @game.destroy
+    #@game.destroy
 
     respond_to do |format|
-      format.html { redirect_to games_url }
-      format.json { head :no_content }
+      
+      # format.html { redirect_to games_url }
+      # format.json { head :no_content }
     end
   end
 end

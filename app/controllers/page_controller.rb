@@ -12,17 +12,17 @@ class PageController < ApplicationController
         else
             @score_hash[score.name] = score.score.to_i
         end
-  
+        
         Rails.logger.debug(@score_hash.inspect )
-      
+
     end
-    
-    
-    
+
   end
 
   def home
         @tournament = Tournament.new
+        @live_tournaments = Tournament.all
+        
   end
 
   def scoreupdate
@@ -36,6 +36,16 @@ class PageController < ApplicationController
   
   def games_list
     Rails.logger.debug( params.inspect + 'klfjldsj;lfkjadlfjldj')
-    @games = Game.find_by_tkey(params[:id])
+    @games = Game.where( "tkey=?", params[:id] )
+  end
+  
+  def remove_game
+    
+      game = Game.find(params[:id])      
+      game.scores.each do |score|
+        score.delete
+      end
+      game.delete  
+      redirect_to games_list_path(params[:key])
   end
 end
