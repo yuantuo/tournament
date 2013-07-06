@@ -24,19 +24,19 @@
 	<!-- tournament Score updates -->
 	<section>
 		<%= form_tag("/scoreupdate/#{params[:id]}", method: :post, :class => "game") do %>
-		    <%= label_tag 'p1', 'player 1', :class => "input-field input-name" %>
-			<%= text_field_tag 'p1' %>
+		    <%= label_tag 'p1', 'player 1' %>
+			<%= text_field_tag 'p1', nil, :class => "input-field input-name" %>
 			
-			<%= label_tag 's1', 'score 1', :class => "input-field input-score" %>
-			<%= text_field_tag 's1', :type => "number", :class => "input-score" %>
+			<%= label_tag 's1', 'score 1' %>
+			<%= number_field_tag 's1', nil, :class => "input-score" %>
 
 			<br />
 			
-		    <%= label_tag 'p2', 'player 2', :class => "input-field input-name" %>
-			<%= text_field_tag 'p2' %>
+		    <%= label_tag 'p2', 'player 2'%>
+			<%= text_field_tag 'p2', nil, :class => "input-field input-name" %>
 
 		    <%= label_tag 's2', 'score 2' %>
-			<%= text_field_tag 's2', :type => "number", :class => "input-field input-score" %>
+			<%= number_field_tag 's2', nil, :class => "input-field input-score" %>
 			
 			<div class="actions">
 		    <%= submit_tag "Submit", :class => "add-button" %>
@@ -49,7 +49,7 @@
 	<!-- tournament Score results -->
 	<section>
 		
-		<table class="table table-striped table-bordered">
+		<table class="scoretable">
 			<br />
 			<br />
 			<thead>
