@@ -9,6 +9,9 @@ Scoreboard::Application.routes.draw do
   match '/scoreupdate/:id', :to => "page#scoreupdate", :as => :scoreupdate
   match '/games/list/:id', :to => "page#games_list", :as => :games_list
   
+  match '/game/:key/:id', :to => "page#remove_game", :as => :remove_game
+  
+  
   resources :tournaments
   # The priority is based upon order of creation:
   # first created -> highest priority.

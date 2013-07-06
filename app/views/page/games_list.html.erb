@@ -1,1 +1,35 @@
-<%= @games.inspect %>
+<h1>List of games played in this tournament</h1>
+<!-- tournament Score results -->
+<section>
+	<table>
+		<br />
+		<br />
+		<thead>
+			<tr>
+				<th><%= 'Number of games' %></th>
+	  			<th><%= 'Players 1' %></th>
+				<th><%= 'Players 2'%></th>
+	  			<th><%= 'Created By' %></th>
+				<th><%= 'Action' %></th>
+			</tr>
+		</thead>
+		<tbody>
+				<% count = 0%>
+		    	<% @games.each do |game| %>
+					<% count += 1%>
+		      		<tr>
+						<td><%= count %></td>
+						<% game.scores.each do |score| %>
+							<td><%= "Name: #{score.name}, Score: #{score.score}" %></td>
+						<% end %>
+						<td><%= game.ip_ %></td>
+						<td><%= link_to 'X', remove_game_path(params[:id], game.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      		</tr>
+		    	<% end %>
+		</tbody>	
+	</table>
+</section>
+<br />
+<section>
+	<%= link_to 'Back', scoreboard_path(params[:id])%>
+</section>
