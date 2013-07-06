@@ -2,7 +2,7 @@
 	
 	<!-- tournament -->	
 	<section>
-		<h1 id="tournamentName" contenteditable>Scoreboard</h1>
+		<h1>Scoreboard</h1>
 		<p class="intro-text">Track tournament scores. </p>
 	<section>
 	
@@ -13,7 +13,7 @@
 		<div class="stages">
 			<div id="stage1" class="stage">
 				<div class="1v1">
-					<p><%= "Tournament name : #{@tournament.name}"%></p>
+					<p id="tournamentName"><%= "Tournament name : #{@tournament.name}"%></p>
 					<p><%= "Tournament  : #{@tournament.email}"%></p>
 					<p><%= "Tournament description : #{@tournament.desc}"%></p>
 				</div>
