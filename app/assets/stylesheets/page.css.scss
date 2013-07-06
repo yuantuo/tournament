@@ -98,11 +98,15 @@ input[id="tournament_name"] {
 	background-color: rgb(46, 204, 113);
 	display: inline-block;
 	color: white;
-	font-size: 2.3em;
+	font-size: 1em;
 	padding: 0.5em 1.5em;
 	margin-bottom: 2em;
 	border: 1px solid rgb(70%, 70%, 70%);
 	border-radius: 5px;
+}
+
+.landing-page .add-button {
+	font-size: 2.3em;
 }
 
 .add-button:hover {
@@ -122,7 +126,7 @@ input[id="tournament_name"] {
 }
 
 .panel.game {
-	font-size: 2em;
+	font-size: 1.6em;
 }
 
 .panel {
@@ -153,6 +157,15 @@ input[id="tournament_name"] {
 	font-size: 3em;
 	padding: 1em;
 	margin: 5px;
+}
+
+.scoreboard a {
+	color: black;
+	font-size: 1.3em;
+}
+
+.scoreboard .add-button {
+	margin-top: 15px;
 }
 
 #storage-wipe {
