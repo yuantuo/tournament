@@ -14,6 +14,11 @@ h1 {
 	margin-bottom: 15px;
 }
 
+a:link {color:#fff;}      /* unvisited link */
+a:visited {color: rgb(240, 240, 240);}  /* visited link */
+a:hover {color: rgb(220, 220, 220);}  /* mouse over link */
+a:active {color: rgb(200, 200, 200);}  /* selected link */
+
 .intro-text {
 	font-size: 1.3em;
 }
@@ -56,6 +61,16 @@ h1 {
 
 input[type="number"] {
 	width: 3em;
+}
+
+label[for="tournament_name"],
+label[for="tournament_email"] {
+	font-size: 2.5em;
+}
+
+input[id="tournament_email"],
+input[id="tournament_name"] {
+	font-size: 2em;
 }
 
 .player-name-field {
